@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #222;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: #fff;
+  }
+  
+  a:visited {
+    color: #6a5acd;
+  }
+  
+  a:active {
+    color: #e91e63;
+  }
+  
+  .main-nav {
+    background-color: #2c3e50;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 100;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu > li {
+    position: relative;
+  }
+  
+  .menu > li > a {
+    display: block;
+    padding: 18px 28px;
+    color: #ecf0f1;
+    font-weight: 500;
+    background-color: #2c3e50;
+    border-right: 1px solid #34495e;
+  }
+  
+  .menu > li:last-child > a {
+    border-right: none;
+  }
+  
+  .menu > li:hover > a {
+    background-color: #34495e;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  }
+  
+  .menu li:hover > .submenu {
+    display: block;
+  }
+  
+  .submenu li {
+    position: relative;
+  }
+  
+  .submenu li a {
+    display: block;
+    padding: 14px 20px;
+    color: #ecf0f1;
+    background-color: #34495e;
+    font-size: 15px;
+  }
+  
+  .submenu li a:hover {
+    background-color: #3d566e;
+  }
+  
+  .sub-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #3d566e;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+  
+  .submenu li:hover > .sub-submenu {
+    display: block;
+  }
+  
+  .sub-submenu li a {
+    display: block;
+    padding: 12px 18px;
+    background-color: #3d566e;
+    color: #f1f1f1;
+    font-size: 14px;
+  }
+  
+  .sub-submenu li a:hover {
+    background-color: #526a82;
+  }
+  
+  .menu a,
+  .submenu a,
+  .sub-submenu a {
+    border-radius: 4px;
+  }
+  
+  .submenu, .sub-submenu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  
+  .menu li:hover > .submenu,
+  .submenu li:hover > .sub-submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+  
